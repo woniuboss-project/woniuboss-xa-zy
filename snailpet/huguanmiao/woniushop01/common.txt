@@ -1,0 +1,31 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+打开浏览器
+    [Arguments]    ${url}
+    Open Browser    ${url}
+
+关闭浏览器
+    Close Browser
+
+最大化窗口
+    Maximize Browser Window
+
+登录页面
+    [Arguments]    ${phone}    ${password}
+    Wait Until Element Is Visible    xpath:/html/body/div[3]/div/div/div[3]/div[2]
+    Click Element    xpath:/html/body/div[3]/div/div/div[3]/div[2]
+    Input Text    xpath:/html/body/app-root/div/snail-index/div/div/div/div[3]/div/div[1]/input[1]    ${phone}
+    Input Text    xpath:/html/body/app-root/div/snail-index/div/div/div/div[3]/div/div[1]/input[2]    ${password}
+    Click Element    xpath:/html/body/app-root/div/snail-index/div/div/div/div[3]/div/div[1]/a
+    等待更新公告
+    关闭更新公告
+    输入手机号    ${phone}
+    输入密码    ${password}
+    点击登录按钮
+
+欢迎页面
+    [Arguments]    ${phonenumber}    ${password}    ${shopname}
+    Element Should Be Visible	    id:shop_name	    ${shopname}
+    Wait Until Element Is Visible    xpath:/html/body/app-root/div/snail-welcome/div/div/img

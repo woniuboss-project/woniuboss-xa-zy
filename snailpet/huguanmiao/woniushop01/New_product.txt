@@ -1,0 +1,11 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+选择新增商品
+    Sleep    3s
+    Click Element    xpath:/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[2]/div[1]/a[1]
+
+点击新增商品
+    Sleep    3s
+    Click Element    css:.cla-a-li > a:nth-child(2)

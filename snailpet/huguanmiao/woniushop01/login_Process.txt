@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          login.txt
+Resource          common.txt
+
+*** Keywords ***
+登录流程
+    [Arguments]    ${phone}    ${password}    ${shopname}
+    打开浏览器    https://snailpet.com/index
+    登录页面    ${phone}    ${password}
+    Run Keyword And Continue On Failure    欢迎页面    ${shopname}
+    关闭浏览器

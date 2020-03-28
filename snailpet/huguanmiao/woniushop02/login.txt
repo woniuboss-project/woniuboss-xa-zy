@@ -1,0 +1,60 @@
+*** Settings ***
+Library           RequestsLibrary
+
+*** Variables ***
+&{headers}        content-type=application/json
+
+*** Test Cases ***
+login
+    ${body}    Create Dictionary    password=123456    phone=18700556871    shop_id=null
+    Create session    session    https://snailpet.com
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}
+    #Log    ${resp.text}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    login success
+    ...    ELSE    log    login fail
+
+add_product
+    ${body}    Create Dictionary    password=123456    phone=18700556871    shop_id=null
+    Create session    session    https://snailpet.com
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}
+    ${body1}    Create Dictionary    shopId=17541    productId=0    barCode=2222    isServer=1    name=牵引绳
+    ...    categoryId=840563    inPrice=0    outPrice=0    percentage=0    notice_stocks=1    weight=0
+    ...    logo_images=    detail_images=    production_time=    brand_name=    version=1    shop_id=17541
+    ${resp}    Post Request    session    /v2/Product/add    ${body1}    headers=${headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    add_product success
+    ...    ELSE    log    add_product fail
+
+add_customer
+    ${body}    Create Dictionary    password=123456    phone=18700556871    shop_id=null
+    Create session    session    https://snailpet.com
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=&{headers}
+    ${body1}    Create Dictionary    addr=    cardNumber=    is_open_upgrade=1    is_spending_msg=1    mark=
+    ...    member_tags=    name=李四    pets=[]    phone=18502981973    sex=    shop_id=17541
+    ...    shopId=17541    spare_phone=
+    ${resp}    Post Request    session    /v2/Members/add    ${body1}    headers=&{headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    add_customer success
+    ...    ELSE    log    add_customer fail
+
+action
+    ${body}    Create Dictionary    password=123456    phone=18700556871    shop_id=null
+    Create session    session    https://snailpet.com
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}
+    ${body1}    Create Dictionary    ex_current_page=首页    ex_kind=点击    ex_next_page=消息提醒    shop_id=17541
+    ${resp}    Post Request    session    /v2/analysis_es/action    ${body1}    headers=&{headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    action success
+    ...    ELSE    log    action fail
+
+setMemberLevel
+    ${body}    Create Dictionary    password=123456    phone=18700556871    shop_id=null
+    Create session    session    https://snailpet.com
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}
+    ${body1}    Create Dictionary    background=4    discount=10    discount_for_combination=10    discountForService=10    enablePlus=1
+    ...    minPrice=11    name=金卡    shop_id=17541    shopId=17541
+    ${resp}    Post Request    session    /v2/Shop/setMemberLevel    ${body1}    headers=&{headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    setMemberLevel success
+    ...    ELSE    log    setMemberLevel fail

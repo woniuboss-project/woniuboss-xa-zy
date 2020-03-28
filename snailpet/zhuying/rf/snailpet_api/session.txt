@@ -1,9 +1,0 @@
-*** Settings ***
-Library           RequestsLibrary
-
-*** Variables ***
-&{headers}        content-type=application/json
-
-*** Keywords ***
-创建session
-    Create Session    session    https://snailpet.com

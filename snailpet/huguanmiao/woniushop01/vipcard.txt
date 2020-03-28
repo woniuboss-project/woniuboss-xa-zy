@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          add_vipcard.txt
+Resource          common.txt
+
+*** Keywords ***
+新增流程
+    [Arguments]    ${cardname}    ${money}
+    打开浏览器    https://snailpet.com/index
+    登录页面    18700556871    123456
+    \    ${cardname}    ${money}
+    关闭浏览器

@@ -1,20 +1,27 @@
 *** Settings ***
-Library           SeleniumLibrary
+Library           Selenium2Library
 
 *** Keywords ***
-点击会员卡按钮
-    Sleep    3s
+添加会员卡
+    Sleep    2s
     Click Element    xpath:/html/body/app-root/div/snail-menu-nav/div/a[13]/div
 
-点击添加会员卡
-    Sleep    5s
+点击添加会员
+    Sleep    3s
     Click Element    css:.last-li
 
 输入会员卡信息
     [Arguments]    ${cardname}    ${money}
     Input Text    xpath:/html/body/app-root/div/ng-component/snail-set-member/div/div/div[2]/div/div/div[2]/input[1]    ${cardname}
-    Input Text    xpath:/html/body/app-root/div/ng-component/snail-set-member/div/div/div[2]/div/div/div[2]/input[2]    ${money}
+    Input Text    xpath:/html/body/app-root/div/snail-member-main/snail-members/div[2]/div/div/div[2]/div/div[1]/div[1]/div[2]/div/div/input    ${money}
 
 点击确定
     Sleep    3s
     Click Element    xpath:/html/body/app-root/div/ng-component/snail-set-member/div/div/div[2]/div/div/div[3]/div[2]
+
+新增页面处理
+    [Arguments]    ${name}    ${phone}
+    添加会员卡
+    点击添加会员
+    输入会员卡信息    ${name}    ${phone}
+    点击确定
