@@ -1,0 +1,6 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+搜索商品页面显示正确性
+    Element Should Be Visible    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[3]/table/tbody/tr/td[8]/a[1]

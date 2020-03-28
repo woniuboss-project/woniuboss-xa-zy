@@ -1,0 +1,77 @@
+*** Settings ***
+Library           SeleniumLibrary
+Resource          addVipCard_page.txt
+Resource          VipCard_page.txt
+Resource          addCustomer_page.txt
+Resource          customer_page.txt
+Resource          inputProduct_page.txt
+Resource          Product_page.txt
+Resource          checkoutPrdouct_page.txt
+Resource          editCustomer_page.txt
+Resource          checkEditCustomer.txt
+Resource          queryProduct_page.txt
+
+*** Keywords ***
+新增会员卡处理
+    [Arguments]    ${name}    ${minPrice}
+    点击会员卡
+    点击添加会员卡
+    输入会员卡名称    ${name}
+    输入最低充值金额    ${minPrice}
+    点击添加
+
+新增页面的处理
+    新增会员卡页面显示正确性
+
+新增会员处理
+    [Arguments]    ${name}    ${phone}
+    点击会员
+    点击新增会员
+    输入姓名    ${name}
+    输入电话    ${phone}
+    点击删除宠物
+    点击确定入库
+
+新增会员页面的处理
+    会员新增页面显示正确性
+
+商品入库页面的处理
+    商品入库页面显示正确性
+
+商品入库处理
+    [Arguments]    ${num}    ${price}
+    点击商品管理
+    点击入库
+    输入入库数量    ${num}
+    输入入库单品成本    ${price}
+    点击确定入库
+
+商品出库处理
+    [Arguments]    ${cnum}
+    点击商品管理
+    点击出库
+    输入出库数量    ${cnum}
+    点击确认出库按钮
+
+商品出库页面的处理
+    商品出库页面显示正确性
+
+修改会员页面处理
+    [Arguments]    ${ename}    ${ephone}
+    点击修改
+    输入修改姓名    ${ename}
+    输入修改电话    ${ephone}
+    删除宠物项
+    点击确认修改按钮
+
+修改会员页面的处理
+    会员修改页面显示正确性
+
+查询商品页面的处理
+    搜索商品页面显示正确性
+
+查询商品页面处理
+    [Arguments]    ${barcode}
+    点击商品管理
+    输入商品条码    ${barcode}
+    点击搜索按钮

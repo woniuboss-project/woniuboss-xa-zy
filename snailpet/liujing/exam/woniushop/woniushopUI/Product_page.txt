@@ -1,0 +1,43 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+点击商品管理
+    Sleep    5s
+    Click Element    xpath=/html/body/app-root/div/snail-menu-nav/div/a[3]/div[1]
+
+点击入库
+    Sleep    5s
+    Click Element    css=.js-check-box > tr:nth-child(1) > td:nth-child(8) > a:nth-child(1)
+
+输入入库数量
+    [Arguments]    ${num}
+    Input Text    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[7]/div/div/div[2]/div/div[1]/div/div/input    ${num}
+
+输入入库单品成本
+    [Arguments]    ${price}
+    Input Text    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[7]/div/div/div[2]/div/div[2]/div[1]/div/div/input    ${price}
+
+点击确定入库
+    Sleep    5s
+    Click Element    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[7]/div/div/div[3]/div[2]
+
+点击出库
+    Sleep    5s
+    Click Element    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[3]/table/tbody/tr[1]/td[8]/a[2]
+
+输入出库数量
+    [Arguments]    ${cnum}
+    Click Element    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[8]/div/div/div[2]/div/div[1]/div/div/input
+
+点击确认出库按钮
+    sleep    5s
+    Click Element    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[8]/div/div/div[3]/div[2]
+
+输入商品条码
+    [Arguments]    ${barcode}
+    Input Text    xpath=//*[@id="idInputCrux"]    ${barcode}
+
+点击搜索按钮
+    Sleep    5s
+    Click Element    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[1]/a/i

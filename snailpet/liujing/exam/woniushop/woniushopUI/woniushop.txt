@@ -1,0 +1,30 @@
+*** Settings ***
+Library           SeleniumLibrary
+Resource          how.txt
+
+*** Test Cases ***
+addVipCard
+    添加会员卡流程    小云    1000
+    添加会员卡流程    ！@#    1000
+    添加会员卡流程    小云    ！@#
+
+addCustomer
+    添加会员流程    小妮    13279331018
+    添加会员流程    小妮    1327933101
+    添加会员流程    @#    13279331018
+
+inputProduct
+    商品入库流程    1    50
+    商品入库流程    1    @
+    商品入库流程    @    50
+
+checkoutProduct
+    商品出库流程    5
+    商品出库流程    @
+
+editCustomer
+    修改会员流程     小妮    13279331008
+
+queryProduct
+    查询商品流程    11111111
+    查询商品流程    @#￥

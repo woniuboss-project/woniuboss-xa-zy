@@ -1,0 +1,6 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+会员修改页面显示正确性
+    Element Should Be Visible    xpath=/html/body/app-root/div/snail-member-main/snail-members/div[1]/div/div[2]/table/tbody/tr[1]/td[10]/a[1]    收银

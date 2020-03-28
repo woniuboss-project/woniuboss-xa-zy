@@ -1,0 +1,13 @@
+*** Settings ***
+Library           RequestsLibrary
+
+*** Keywords ***
+新增商品
+    ${body}    Create Dictionary    shopId=17531    productId=0    barCode=111111    isServer=0    name=杯子
+    ...    categoryId=839452    inPrice=20    outPrice=30    percentage=0    stocks=100    notice_stocks=1
+    ...    weight=0    logo_images=    detail_images=    shelf_life=90    production_time=1583942400    brand_name=
+    ...    add_brand_category_id=15    version=1    shop_id=17531
+    ${resp}    Post Request    session    /v2/Product/add    ${body}    headers=${headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    add_product success
+    ...    ELSE    log    add_product fail

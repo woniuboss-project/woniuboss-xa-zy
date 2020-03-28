@@ -1,0 +1,21 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+点击修改
+    Click Element    xpath=/html/body/app-root/div/snail-member-main/snail-members/div[1]/div/div[2]/table/tbody/tr[1]/td[10]/a[3]
+
+输入修改姓名
+    [Arguments]    ${ename}
+    Input Text    xpath=/html/body/app-root/div/snail-member-main/snail-members/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/input    ${ename}
+
+输入修改电话
+    [Arguments]    ${ephone}
+    Input Text    xpath=/html/body/app-root/div/snail-member-main/snail-members/div[2]/div/div/div[2]/div/div[1]/div[1]/div[2]/div/div/input    ${ephone}
+
+删除宠物项
+    Click Element    xpath=/html/body/app-root/div/snail-member-main/snail-members/div[2]/div/div/div[2]/div/div[2]/ul/li/div[7]/a
+
+点击确认修改按钮
+    Sleep    5s
+    Click Element    css=div.pop_window:nth-child(1) > div:nth-child(3) > div:nth-child(2)

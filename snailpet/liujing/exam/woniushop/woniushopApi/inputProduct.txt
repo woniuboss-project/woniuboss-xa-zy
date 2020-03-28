@@ -1,0 +1,11 @@
+*** Settings ***
+Library           RequestsLibrary
+
+*** Keywords ***
+商品入库
+    ${body}    Create Dictionary    exp_time=1598457600    inPrice=70    mark=    number=20    productId=2133565
+    ...    production_time=1585238400    shelf_life=153    shop_id=17531    shopId=17531
+    ${resp}    Post Request    session    /v2/product/update/stocks    ${body}    headers=${headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    checkout_product success
+    ...    ELSE    log    checkout_product fail

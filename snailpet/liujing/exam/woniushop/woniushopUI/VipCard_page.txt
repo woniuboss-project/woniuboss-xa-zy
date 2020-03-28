@@ -1,0 +1,22 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+点击添加会员卡
+    Sleep    5s
+    Click Element    xpath=/html/body/app-root/div/ng-component/snail-set-member/div/div/div[1]/div/ul/li[3]/button
+
+输入会员卡名称
+    [Arguments]    ${name}
+    Input Text    css=input.add-input:nth-child(1)    ${name}
+
+输入最低充值金额
+    [Arguments]    ${minPrice}
+    Input Text    css=input.add-input:nth-child(3)    ${minPrice}
+
+点击添加
+    Click Element    xpath=/html/body/app-root/div/ng-component/snail-set-member/div/div/div[2]/div/div/div[3]/div[2]
+
+点击会员卡
+    Sleep    5s
+    Click Element    xpath=/html/body/app-root/div/snail-menu-nav/div/a[13]

@@ -1,0 +1,9 @@
+*** Settings ***
+Library           RequestsLibrary
+Resource          common.txt
+Resource          checkoutProduct.txt
+
+*** Test Cases ***
+checkoutProduct
+    登录
+    商品出库

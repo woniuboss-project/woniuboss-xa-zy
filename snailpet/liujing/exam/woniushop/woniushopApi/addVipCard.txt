@@ -1,0 +1,11 @@
+*** Settings ***
+Library           RequestsLibrary
+
+*** Keywords ***
+添加会员卡
+    ${body}    Create Dictionary    background=0    discount=10    discount_for_combination=10    discountForService=10    enablePlus=1
+    ...    minPrice=1000    name=小云    shop_id=17531    shopId=17531
+    ${resp}    Post Request    session    /v2/Shop/setMemberLevel    ${body}    headers=${headers}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    add_VipCard success
+    ...    ELSE    log    add_VipCard fail

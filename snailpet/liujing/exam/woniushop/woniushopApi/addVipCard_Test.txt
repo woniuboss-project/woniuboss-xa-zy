@@ -1,0 +1,9 @@
+*** Settings ***
+Library           RequestsLibrary
+Resource          common.txt
+Resource          addVipCard.txt
+
+*** Test Cases ***
+add_VipCard
+    登录
+    添加会员卡

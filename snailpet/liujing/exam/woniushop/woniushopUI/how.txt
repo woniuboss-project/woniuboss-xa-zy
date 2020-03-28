@@ -1,0 +1,59 @@
+*** Settings ***
+Resource          common.txt
+Resource          page_process.txt
+Library           SeleniumLibrary
+
+*** Keywords ***
+添加会员卡流程
+    [Arguments]    ${name}    ${minPrice}
+    打开浏览器    https://snailpet.com/index
+    点击更新公告的确认按钮
+    登录
+    新增会员卡处理    ${name}     ${minPrice}
+    Run Keyword And Continue On Failure    新增页面的处理
+    关闭浏览器
+
+添加会员流程
+    [Arguments]    ${name}    ${phone}
+    打开浏览器    https://snailpet.com/index
+    点击更新公告的确认按钮
+    登录
+    新增会员处理    ${name}     ${phone}
+    Run Keyword And Continue On Failure    新增会员页面的处理
+    关闭浏览器
+
+商品入库流程
+    [Arguments]    ${num}    ${price}
+    打开浏览器    https://snailpet.com/index
+    点击更新公告的确认按钮
+    登录
+    商品入库处理    ${num}    ${price}
+    Run Keyword And Continue On Failure    商品入库页面的处理
+    关闭浏览器
+
+商品出库流程
+    [Arguments]    ${cnum}
+    打开浏览器    https://snailpet.com/index
+    点击更新公告的确认按钮
+    登录
+    商品出库处理    ${cnum}
+    Run Keyword And Continue On Failure    商品出库页面的处理
+    关闭浏览器
+
+修改会员流程
+    [Arguments]    ${ename}    ${ephone}
+    打开浏览器    https://snailpet.com/index
+    点击更新公告的确认按钮
+    登录
+    新增会员处理    ${ename}     ${ephone}
+    Run Keyword And Continue On Failure    修改会员页面的处理
+    关闭浏览器
+
+查询商品流程
+    [Arguments]    ${barcode}
+    打开浏览器    https://snailpet.com/index
+    点击更新公告的确认按钮
+    登录
+    查询商品页面处理    ${barcode}
+    Run Keyword And Continue On Failure    查询商品页面的处理
+    关闭浏览器

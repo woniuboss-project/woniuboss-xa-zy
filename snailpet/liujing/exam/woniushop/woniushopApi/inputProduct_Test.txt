@@ -1,0 +1,9 @@
+*** Settings ***
+Library           RequestsLibrary
+Resource          common.txt
+Resource          inputProduct.txt
+
+*** Test Cases ***
+商品入库
+    登录
+    商品入库

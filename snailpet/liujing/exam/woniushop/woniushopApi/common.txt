@@ -1,0 +1,11 @@
+*** Settings ***
+Library           RequestsLibrary
+
+*** Variables ***
+&{headers}        content-type=application/json
+
+*** Keywords ***
+登录
+    ${body}    Create Dictionary    password=123456    phone=15202486152    shop_id=null
+    Create Session    session    https://snailpet.com
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}

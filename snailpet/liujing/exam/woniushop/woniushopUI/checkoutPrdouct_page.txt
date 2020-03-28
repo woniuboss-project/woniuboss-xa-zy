@@ -1,0 +1,6 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+商品出库页面显示正确性
+    Element Should Be Visible    xpath=/html/body/app-root/div/ng-component/div/div/snail-product-stock/div[3]/table/tbody/tr[1]/td[8]/a[1]    入库

@@ -1,0 +1,6 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+新增会员卡页面显示正确性
+    Element Should Be Visible    xpath=/html/body/app-root/div/ng-component/snail-set-member/div/div/div[1]/div/ul/li[1]/a    设置

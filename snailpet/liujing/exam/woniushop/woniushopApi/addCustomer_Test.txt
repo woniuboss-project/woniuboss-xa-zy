@@ -1,0 +1,9 @@
+*** Settings ***
+Library           RequestsLibrary
+Resource          common.txt
+Resource          addCustomer.txt
+
+*** Test Cases ***
+addCustomer
+    登录
+    新增会员

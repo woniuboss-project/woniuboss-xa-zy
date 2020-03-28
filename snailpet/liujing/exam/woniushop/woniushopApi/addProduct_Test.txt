@@ -1,0 +1,9 @@
+*** Settings ***
+Library           RequestsLibrary
+Resource          common.txt
+Resource          addProduct.txt
+
+*** Test Cases ***
+addProduct
+    登录
+    新增商品
