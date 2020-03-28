@@ -1,0 +1,14 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+等待新增成功的信息显示
+    Wait Until Element Is Visible    xpath:/html/body/app-root/div/snail-member-main/snail-members/div[1]/div/div[2]/table/tbody/tr[1]/td[2]/a/span
+
+检查提示信息的正确性
+    [Arguments]    ${information}
+    Element Should Be Visible    xpath:/html/body/app-root/div/snail-member-main/snail-members/div[1]/div/div[2]/table/tbody/tr[1]/td[2]/a/span    ${information}
+
+检查查询的正确性
+    [Arguments]    ${phonenumber}
+    Element Should Be Visible    xpath:/html/body/app-root/div/snail-member-main/snail-members/div[1]/div/div[2]/table/tbody/tr/td[4]    ${phonenumber}

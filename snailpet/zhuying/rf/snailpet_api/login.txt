@@ -1,0 +1,18 @@
+*** Settings ***
+Library           RequestsLibrary
+Resource          session.txt
+
+*** Keywords ***
+登录功能测试
+    ${body}    Create Dictionary    password=123456    phone=13401222998    shop_id=null
+    创建session
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}
+    #Log    ${resp.text}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    login success
+    ...    ELSE    log    login fail
+
+登录
+    ${body}    Create Dictionary    password=123456    phone=13401222998    shop_id=null
+    创建session
+    ${resp}    Post Request    session    /v2/Passport/login    ${body}    headers=${headers}

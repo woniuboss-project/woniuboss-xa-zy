@@ -1,0 +1,13 @@
+*** Settings ***
+Library           RequestsLibrary
+
+*** Keywords ***
+新增会员
+    ${body}    Create Dictionary    addr=    cardNumber=    is_open_upgrade=1    is_spending_msg=1    mark=
+    ...    member_tags=    name=明明    pets=[]    phone=13498789567    sex=1    shop_id=17546
+    ...    shopId=17546    spare_phone=
+    ${resp}    Post Request    session    /v2/Members/add    ${body}    headers=${headers}
+    #Log    ${resp.text}
+    ${num}    Get Length    ${resp.text}
+    Run Keyword If    ${num}>0    log    add customer success
+    ...    ELSE    log    add customer fail

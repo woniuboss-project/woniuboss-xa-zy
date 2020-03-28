@@ -1,0 +1,10 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+等待欢迎图片显示
+    Wait Until Element Is Visible    xpath:/html/body/app-root/div/snail-welcome/div/div/img
+
+检查店名的正确性
+    [Arguments]    ${shopname}
+    Element Should Be Visible    id:shop_name    ${shopname}
