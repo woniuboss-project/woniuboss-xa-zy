@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Unit Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-04-22 16:20:56</p>
-<p class='attribute'><strong>Duration:</strong> 0:02:59.144328</p>
-<p class='attribute'><strong>Status:</strong> Pass 2 Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-04-23 22:27:16</p>
+<p class='attribute'><strong>Duration:</strong> 0:09:43.407405</p>
+<p class='attribute'><strong>Status:</strong> Pass 1 Error 2</p>
 
 <p class='description'></p>
 </div>
@@ -222,80 +222,62 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='errorClass'>
-    <td>woniuboss.bin.test_employment.EmployTest</td>
+    <td>woniuboss.bin.test_financial.FinancialTest</td>
     <td>3</td>
-    <td>2</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>2</td>
     <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_technical_interview_0__</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_technical_interview_1_</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_technical_interview_2__</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_twice_decrypt_0_woniu123</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
         error</a>
 
-    <div id='div_ft1.3' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.3: Traceback (most recent call last):
-  File "E:\tools\python3.6\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "E:\tools\workspaceTwo\woniuboss\bin\test_employment.py", line 26, in test_technical_interview
-    self.employ.technical_interview('..\\config\\base.conf',technical_interview_data)
-  File "E:\tools\workspaceTwo\woniuboss\lib\employment_manage.py", line 39, in technical_interview
-    self.input_question(technical_interview_data['question_content'])
-  File "E:\tools\workspaceTwo\woniuboss\lib\employment_manage.py", line 20, in input_question
-    Service.send_input(content,question_content)
-  File "E:\tools\workspaceTwo\woniuboss\tools\service.py", line 18, in send_input
-    ele.click()
-  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
+ft1.1: Traceback (most recent call last):
+  File "E:\tools\workspaceTwo\woniuboss\bin\test_financial.py", line 17, in setUp
+    self.driver = Service.get_driver('..\\config\\base.conf')
+  File "E:\tools\workspaceTwo\woniuboss\tools\service.py", line 73, in get_driver
+    driver = getattr(webdriver, contents['BROWSER'])()
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\firefox\webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
   File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
     self.error_handler.check_response(response)
   File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt;textarea id="squestion" class="text" name="sr.questions"&gt; could not be scrolled into view
+selenium.common.exceptions.WebDriverException: Message: connection refused
 
 Traceback (most recent call last):
-  File "E:\tools\python3.6\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "E:\tools\workspaceTwo\woniuboss\bin\test_employment.py", line 26, in test_technical_interview
-    self.employ.technical_interview('..\\config\\base.conf',technical_interview_data)
-  File "E:\tools\workspaceTwo\woniuboss\lib\employment_manage.py", line 39, in technical_interview
-    self.input_question(technical_interview_data['question_content'])
-  File "E:\tools\workspaceTwo\woniuboss\lib\employment_manage.py", line 20, in input_question
-    Service.send_input(content,question_content)
-  File "E:\tools\workspaceTwo\woniuboss\tools\service.py", line 18, in send_input
-    ele.click()
-  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
+  File "E:\tools\workspaceTwo\woniuboss\bin\test_financial.py", line 17, in setUp
+    self.driver = Service.get_driver('..\\config\\base.conf')
+  File "E:\tools\workspaceTwo\woniuboss\tools\service.py", line 73, in get_driver
+    driver = getattr(webdriver, contents['BROWSER'])()
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\firefox\webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
   File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
     self.error_handler.check_response(response)
   File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt;textarea id="squestion" class="text" name="sr.questions"&gt; could not be scrolled into view
+selenium.common.exceptions.WebDriverException: Message: connection refused
 
 
 
@@ -306,12 +288,83 @@ selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt
     </td>
 </tr>
 
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_twice_decrypt_1_123</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: Traceback (most recent call last):
+  File "E:\tools\python3.6\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "E:\tools\workspaceTwo\woniuboss\bin\test_financial.py", line 56, in test_twice_decrypt
+    self.financial.decrypt('..\\config\\base.conf', add_password_data)
+  File "E:\tools\workspaceTwo\woniuboss\lib\financial_manage.py", line 58, in decrypt
+    self.input_password(add_password_data['password'])
+  File "E:\tools\workspaceTwo\woniuboss\lib\financial_manage.py", line 45, in input_password
+    Service.send_input(psword, password)
+  File "E:\tools\workspaceTwo\woniuboss\tools\service.py", line 18, in send_input
+    ele.click()
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt;input name="secondPass" type="password"&gt; could not be scrolled into view
+
+Traceback (most recent call last):
+  File "E:\tools\python3.6\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "E:\tools\workspaceTwo\woniuboss\bin\test_financial.py", line 56, in test_twice_decrypt
+    self.financial.decrypt('..\\config\\base.conf', add_password_data)
+  File "E:\tools\workspaceTwo\woniuboss\lib\financial_manage.py", line 58, in decrypt
+    self.input_password(add_password_data['password'])
+  File "E:\tools\workspaceTwo\woniuboss\lib\financial_manage.py", line 45, in input_password
+    Service.send_input(psword, password)
+  File "E:\tools\workspaceTwo\woniuboss\tools\service.py", line 18, in send_input
+    ele.click()
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "E:\tools\python3.6\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: Element &lt;input name="secondPass" type="password"&gt; could not be scrolled into view
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_twice_decrypt_2_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
     <td>3</td>
-    <td>2</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>2</td>
     <td>&nbsp;</td>
 </tr>
 </table>
