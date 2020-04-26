@@ -1,0 +1,13 @@
+*** Settings ***
+Resource          customerlist_page.txt
+Resource          customer_page.txt
+
+*** Keywords ***
+查询页面处理
+    [Arguments]    ${phonenumber}
+    点击会员按钮
+    输入会员电话    ${phonenumber}
+
+会员查询列表页处理
+    [Arguments]    ${phonenumber}
+    检查查询的正确性    ${phonenumber}

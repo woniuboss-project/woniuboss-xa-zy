@@ -1,0 +1,16 @@
+*** Settings ***
+Resource          customer_page.txt
+Resource          customerlist_page.txt
+
+*** Keywords ***
+修改页面处理
+    [Arguments]    ${content}
+    点击会员按钮
+    点击修改按钮
+    修改备注    ${content}
+    点击删除宠物按钮
+    点击确定按钮
+
+会员修改列表页处理
+    [Arguments]    ${information}
+    检查提示信息的正确性    ${information}
