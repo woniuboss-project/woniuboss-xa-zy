@@ -41,11 +41,10 @@ class Service:
 		cls.open_page(driver, base_config_path)
 		# 通过字典方式传递cookie信息
 		contents = Utility.get_json(base_config_path)
-		#driver.add_cookie({'name': 'username', 'value': contents['username']})
-		#driver.add_cookie({'name': 'password', 'value': contents['password']})
-		#driver.add_cookie({'name':'_jfinal_captcha','value':contents['_jfinal_captcha']})
-		driver.add_cookie({'name': 'token', 'value': contents['token']})
-		driver.add_cookie({'name': 'workId', 'value': contents['workId']})
+		driver.add_cookie({'name': 'username', 'value': contents['username']})
+		driver.add_cookie({'name': 'password', 'value': contents['password']})
+		driver.add_cookie({'name': 'JSESSIONID', 'value': contents['JSESSIONID']})
+		driver.add_cookie({'name': 'rememberMe', 'value': contents['rememberMe']})
 		cls.open_page(driver, base_config_path)
 
 	# 打开页面的方法
