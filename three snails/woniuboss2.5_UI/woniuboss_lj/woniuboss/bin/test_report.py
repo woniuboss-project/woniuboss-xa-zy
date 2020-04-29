@@ -20,17 +20,17 @@ class TestReport(unittest.TestCase):
     def tearDown(cls):
         cls.driver.quit()
 
-    # 咨询部报表中心功能测试
-    @parameterized.expand(test_query_console_info)
-    def test_query_console(self,stime,etime,expect):
-        query_console_data = {'stime': stime, 'etime': etime}
-        self.report.query_console('..\\config\\base.conf', query_console_data)
-        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
-            actual = 'query_successful'
-        else:
-            actual = 'query_failed'
-        # 断言
-        self.assertEqual(actual, expect)
+    # # 咨询部报表中心功能测试
+    # @parameterized.expand(test_query_console_info)
+    # def test_query_console(self,stime,etime,expect):
+    #     query_console_data = {'stime': stime, 'etime': etime}
+    #     self.report.query_console('..\\config\\base.conf', query_console_data)
+    #     if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
+    #         actual = 'query_successful'
+    #     else:
+    #         actual = 'query_failed'
+    #     # 断言
+    #     self.assertEqual(actual, expect)
 
     def test_query_phase(self):
         self.report.query_phase('..\\config\\base.conf')
@@ -77,14 +77,14 @@ class TestReport(unittest.TestCase):
         # 断言
         self.assertEqual(actual, 'query_successful')
 
-    def test_query_lastmonth(self):
-        self.report.query_lastmonth('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
-            actual = 'query_successful'
-        else:
-            actual = 'query_failed'
-        # 断言
-        self.assertEqual(actual, 'query_successful')
+    # def test_query_lastmonth(self):
+    #     self.report.query_lastmonth('..\\config\\base.conf')
+    #     if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
+    #         actual = 'query_successful'
+    #     else:
+    #         actual = 'query_failed'
+    #     # 断言
+    #     self.assertEqual(actual, 'query_successful')
 
     def test_query_year(self):
         self.report.query_year('..\\config\\base.conf')

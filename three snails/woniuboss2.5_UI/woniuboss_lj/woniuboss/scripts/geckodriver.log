@@ -306,3 +306,114 @@ JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code a
 JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
 JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
 1588143174714	Marionette	INFO	Stopped listening on port 25212
+1588144383270	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.gk2ggfpS1PRh"
+1588144383734	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144383854	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144383854	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144383855	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144383855	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144385638	Marionette	INFO	Listening on port 25857
+1588144386108	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: https://libs.baidu.com/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1588144421899	Marionette	INFO	Stopped listening on port 25857
+1588144426305	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.BkTD8aDGriuw"
+1588144426678	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144426821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144426821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144426821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144426821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144428695	Marionette	INFO	Listening on port 25944
+1588144429010	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: https://libs.baidu.com/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1588144441313	Marionette	INFO	Stopped listening on port 25944
+1588144446230	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.OU5knu4My9iB"
+1588144446623	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144446757	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144446757	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144446757	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144446757	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144448662	Marionette	INFO	Listening on port 26002
+1588144448939	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: https://libs.baidu.com/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1588144463796	Marionette	INFO	Stopped listening on port 26002
+1588144468131	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.offFqPR5FIHg"
+1588144468569	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144468694	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144468695	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144468695	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144468695	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144471082	Marionette	INFO	Listening on port 26062
+1588144471344	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript error: http://wn2:8080/WoniuBoss2.5/pages/js/bootstrap.min.js, line 6: Error: Bootstrap's JavaScript requires jQuery
+JavaScript warning: https://libs.baidu.com/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1588144525359	Marionette	INFO	Stopped listening on port 26062
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 426: Error: OS.File has been shut down. Rejecting post to stat
+1588144529678	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.K5sgsH8AZpIe"
+1588144530226	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144530364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144530364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144530365	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144530365	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144532198	Marionette	INFO	Listening on port 26131
+1588144532384	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+1588144548584	Marionette	INFO	Stopped listening on port 26131
+1588144555894	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.VvZcDVVHQQGh"
+1588144556724	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144556852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144556852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144556852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144556853	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144560430	Marionette	INFO	Listening on port 26187
+1588144560819	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: https://libs.baidu.com/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1588144576362	Marionette	INFO	Stopped listening on port 26187
+1588144585769	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.r0egmjXrjHQB"
+1588144586142	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144586268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144586268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144586268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144586268	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144587987	Marionette	INFO	Listening on port 26249
+1588144588483	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+1588144597576	Marionette	INFO	Stopped listening on port 26249
+1588144604680	mozrunner::runner	INFO	Running command: "D:\\火狐\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\think\\AppData\\Local\\Temp\\rust_mozprofile.S2sWmJsHNBEv"
+1588144605054	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1588144605176	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1588144605176	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1588144605177	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1588144605177	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1588144606903	Marionette	INFO	Listening on port 26306
+1588144607389	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/js/moment-with-locales.min.js, line 1: unreachable code after return statement
+JavaScript warning: http://wn2:8080/WoniuBoss2.5/, line 2728: unreachable code after return statement
+1588144613636	Marionette	INFO	Stopped listening on port 26306

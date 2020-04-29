@@ -50,20 +50,20 @@ class TestMarket(unittest.TestCase):
         # 断言
         self.assertEqual(actual, 'query_successful')
 
-    # 新增资源
-    @parameterized.expand(test_addCus_info)
-    def test_addCus(self, cus_phone,cus_name, cus_email, cus_qq,cus_school,cus_major,cus_intent,cus_salary,cus_applposition,cus_age,cus_eduexp,cus_experience,cus_last_tracking,expect):
-        addResModel_data={'cus_phone':cus_phone,'cus_name':cus_name,'cus_email':cus_email,'cus_qq':cus_qq,
-                          'cus_school':cus_school,'cus_major':cus_major,'cus_intent':cus_intent,'cus_salary':cus_salary,
-                          'cus_applposition': cus_applposition, 'cus_age': cus_age,'cus_eduexp':cus_eduexp,'cus_experience':cus_experience,
-                          'cus_last_tracking': cus_last_tracking}
-        self.market.addCus('..\\config\\base.conf', addResModel_data)
-        if Service.is_element_present(self.driver,By.CSS_SELECTOR,'div.bootbox-body'):
-            actual='add_successful'
-        else:
-            actual='add_successful'
-        #断言
-        self.assertEqual(actual,expect)
+    # # 新增资源
+    # @parameterized.expand(test_addCus_info)
+    # def test_addCus(self, cus_phone,cus_name, cus_email, cus_qq,cus_school,cus_major,cus_intent,cus_salary,cus_applposition,cus_age,cus_eduexp,cus_experience,cus_last_tracking,expect):
+    #     addResModel_data={'cus_phone':cus_phone,'cus_name':cus_name,'cus_email':cus_email,'cus_qq':cus_qq,
+    #                       'cus_school':cus_school,'cus_major':cus_major,'cus_intent':cus_intent,'cus_salary':cus_salary,
+    #                       'cus_applposition': cus_applposition, 'cus_age': cus_age,'cus_eduexp':cus_eduexp,'cus_experience':cus_experience,
+    #                       'cus_last_tracking': cus_last_tracking}
+    #     self.market.addCus('..\\config\\base.conf', addResModel_data)
+    #     if Service.is_element_present(self.driver,By.CSS_SELECTOR,'div.bootbox-body'):
+    #         actual='add_successful'
+    #     else:
+    #         actual='add_successful'
+    #     #断言
+    #     self.assertEqual(actual,expect)
 
     # # 上传简历
     # @parameterized.expand(test_validateUpload_info)
