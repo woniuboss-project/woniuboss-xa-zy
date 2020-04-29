@@ -1,3 +1,5 @@
+import time
+
 from woniuboss.tools.service import Service
 from selenium import webdriver
 
@@ -65,10 +67,19 @@ class Market:
         self.input_stime(qureyNetCus_data['stime'])
         self.input_etime(qureyNetCus_data['etime'])
         self.click_query_button()
+        time.sleep(3)
+
+    def query_all(self, base_config_path):
+        driver = self.driver
+        Service.miss_login(driver, base_config_path)
+        self.second_password('..\\config\\base.conf')
+        self.market()
+        self.click_query_button()
+        time.sleep(3)
 
     #点击新增网络按钮
     def click_add_button(self):
-        self.driver.find_element_by_link_text('新增网络')
+        self.driver.find_element_by_css_selector('button.btn:nth-child(6)').click()
 
     #随机选择区域
     def select_cus_region(self):

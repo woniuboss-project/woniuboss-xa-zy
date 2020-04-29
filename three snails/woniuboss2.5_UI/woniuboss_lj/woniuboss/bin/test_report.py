@@ -25,7 +25,7 @@ class TestReport(unittest.TestCase):
     def test_query_console(self,stime,etime,expect):
         query_console_data = {'stime': stime, 'etime': etime}
         self.report.query_console('..\\config\\base.conf', query_console_data)
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -34,7 +34,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_phase(self):
         self.report.query_phase('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -43,7 +43,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_today(self):
         self.report.query_today('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -52,7 +52,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_week(self):
         self.report.query_week('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -61,7 +61,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_month(self):
         self.report.query_month('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -70,7 +70,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_lastweek(self):
         self.report.query_lastweek('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -79,7 +79,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_lastmonth(self):
         self.report.query_lastmonth('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'
@@ -88,7 +88,7 @@ class TestReport(unittest.TestCase):
 
     def test_query_year(self):
         self.report.query_year('..\\config\\base.conf')
-        if Service.is_element_present(self.driver, By.LINK_TEXT, '咨询师'):
+        if Service.is_element_present(self.driver, By.CSS_SELECTOR, '#成都 > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1)'):
             actual = 'query_successful'
         else:
             actual = 'query_failed'

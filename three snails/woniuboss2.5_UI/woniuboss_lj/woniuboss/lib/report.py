@@ -1,6 +1,6 @@
 # 报表中心ui测试
 from woniuboss.tools.service import Service
-
+import time
 class Report:
 
     def __init__(self,driver):
@@ -9,6 +9,7 @@ class Report:
     #点击报表中心
     def click_report(self):
         self.driver.find_element_by_css_selector('a.list-group-item:nth-child(1)').click()
+        time.sleep(3)
 
     #点击咨询部
     def click_consult(self):
@@ -38,10 +39,12 @@ class Report:
         self.input_stime(query_console_data['stime'])
         self.input_etime(query_console_data['etime'])
         self.click_query_button()
+        time.sleep(5)
+
 
     #查询当期
     def click_phase(self):
-        self.driver.find_element_by_css_selecter('#consulting-1 > div:nth-child(1) > div:nth-child(1) > button:nth-child(4)').click()
+        self.driver.find_element_by_css_selector('#consulting-1 > div:nth-child(1) > div:nth-child(1) > button:nth-child(4)').click()
 
     #查询当期动作组织
     def query_phase(self,base_config_path):
@@ -50,10 +53,11 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_phase()
+        time.sleep(5)
 
     # 查询今日
     def click_today(self):
-        self.driver.find_element_by_css_selecter('#consulting-1 > div:nth-child(1) > div:nth-child(1) > button:nth-child(5)').click()
+        self.driver.find_element_by_css_selector('#consulting-1 > div:nth-child(1) > div:nth-child(1) > button:nth-child(5)').click()
 
     # 查询今日动作组织
     def query_today(self, base_config_path):
@@ -62,6 +66,7 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_today()
+        time.sleep(5)
 
     #查询本周
     def click_week(self):
@@ -74,6 +79,7 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_week()
+        time.sleep(5)
 
     # 查询本月
     def click_month(self):
@@ -87,6 +93,7 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_month()
+        time.sleep(5)
 
     # 查询上周
     def click_lastweek(self):
@@ -100,10 +107,11 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_lastweek()
+        time.sleep(5)
 
     # 查询上月
     def click_lastmonth(self):
-        self.driver.find_element_by_css_selecter(
+        self.driver.find_element_by_css_selector(
             '#consulting-1 > div:nth-child(1) > div:nth-child(1) > button:nth-child(9)').click()
 
     # 查询上月动作组织
@@ -113,6 +121,7 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_lastmonth()
+        time.sleep(5)
 
     # 查询本年
     def click_year(self):
@@ -126,3 +135,4 @@ class Report:
         self.click_report()
         self.click_consult()
         self.click_year()
+        time.sleep(5)

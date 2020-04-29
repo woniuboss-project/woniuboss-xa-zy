@@ -1,5 +1,6 @@
 # 后台管理ui测试
 from woniuboss.tools.service import Service
+import time
 class Management:
 
     def __init__(self,driver):
@@ -33,17 +34,17 @@ class Management:
 
     # 点击菜单管理
     def click_menu_button(self):
-        self.driver.find_element_by_css_selecter('ul.nav-tabs:nth-child(1) > li:nth-child(1) > a:nth-child(1)').click()
+        self.driver.find_element_by_css_selector('ul.nav-tabs:nth-child(1) > li:nth-child(1) > a:nth-child(1)').click()
 
     # 点击资源树
     def click_tree_button(self):
-        self.driver.find_element_by_css_selecter(
+        self.driver.find_element_by_css_selector(
             'button.btn-padding:nth-child(1)').click()
 
     #点击新增资源
     def click_add_button(self):
-        self.driver.find_element_by_id(
-            'addBtn_res_tree_1').click()
+        self.driver.find_element_by_xpath(
+            '//*[@id="addBtn_res_tree_1"]').click()
 
     #输入资源名
     def input_name(self, res_name):
@@ -71,7 +72,8 @@ class Management:
     def add_resource(self, base_config_path, add_resource_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        time.sleep(5)
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_menu_button()
         self.click_tree_button()
@@ -95,7 +97,7 @@ class Management:
     def edit_res(self,base_config_path, edit_resource_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_menu_button()
         self.click_edit_button()
@@ -115,7 +117,7 @@ class Management:
     def remove_res(self,base_config_path):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_menu_button()
         self.click_remove_button()
@@ -148,7 +150,7 @@ class Management:
     def set(self,base_config_path,set_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_menu_button()
         self.click_set_button()
@@ -187,7 +189,7 @@ class Management:
     def add_role(self,base_config_path,add_role_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_role()
         self.click_add_role_button()
@@ -223,7 +225,7 @@ class Management:
     def edit_role(self,base_config_path,edit_role_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_role()
         self.click_role_edit_button()
@@ -234,7 +236,7 @@ class Management:
 
     #点击用户管理
     def click_user(self):
-        self.driver.find_element_by_css_selector('li.active:nth-child(3) > a:nth-child(1)').click()
+        self.driver.find_element_by_xpath('/html/body/div[7]/div[2]/ul/li[3]/a').click()
 
     #输入用户名
     def input_username(self,username):
@@ -249,7 +251,7 @@ class Management:
     def query_username(self,base_config_path,query_username_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_user()
         self.input_username(query_username_data['username'])
@@ -281,7 +283,7 @@ class Management:
     def user_set(self,base_config_path,user_set_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_user()
         self.click_user_set()
@@ -292,7 +294,7 @@ class Management:
 
     #点击字典管理
     def click_dictionary(self):
-        self.driver.find_element_by_css_selector('li.active:nth-child(4) > a:nth-child(1)').click()
+        self.driver.find_element_by_xpath('/html/body/div[7]/div[2]/ul/li[4]/a').click()
 
     #点击新增
     def click_dictionary_add_button(self):
@@ -330,7 +332,7 @@ class Management:
     def dict_add(self,base_config_path,dict_add_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_dictionary()
         self.click_dictionary_add_button()
@@ -353,7 +355,7 @@ class Management:
     def start(self,base_config_path):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_dictionary()
         self.click_start_button()
@@ -395,7 +397,7 @@ class Management:
     def details_edit(self,base_config_path,details_edit_data):
         driver = self.driver
         Service.miss_login(driver, base_config_path)
-        self.second_password()
+        self.second_password('..\\config\\base.conf')
         self.click_management()
         self.click_dictionary()
         self.click_details()
