@@ -93,7 +93,7 @@ class Enterprise:
         self.edit_employee_name(edit_enterprise_data['entName'])
         self.edit_entcate(edit_enterprise_data['entcate'])
         self.click_esave()
-        driver.switch_to.alert.accept()
+        #driver.switch_to.alert.accept()
 
     #输入企业名称
     def input_employee_name(self,employee):
